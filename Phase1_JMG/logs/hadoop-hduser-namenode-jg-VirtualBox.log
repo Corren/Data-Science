@@ -1,0 +1,452 @@
+2018-03-05 22:19:44,164 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = jg-VirtualBox/127.0.1.1
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 3.0.0
+STARTUP_MSG:   classpath = /usr/local/hadoop/etc/hadoop:/usr/local/hadoop/share/hadoop/common/lib/jetty-webapp-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-security-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-logging-1.1.3.jar:/usr/local/hadoop/share/hadoop/common/lib/snappy-java-1.0.5.jar:/usr/local/hadoop/share/hadoop/common/lib/jul-to-slf4j-1.7.25.jar:/usr/local/hadoop/share/hadoop/common/lib/xz-1.0.jar:/usr/local/hadoop/share/hadoop/common/lib/junit-4.11.jar:/usr/local/hadoop/share/hadoop/common/lib/kerby-xdr-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-math3-3.1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/token-provider-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/httpclient-4.5.2.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-admin-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/curator-recipes-2.12.0.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-databind-2.7.8.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-cli-1.2.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-server-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/common/lib/jersey-json-1.19.jar:/usr/local/hadoop/share/hadoop/common/lib/curator-client-2.12.0.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-server-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/avro-1.7.7.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-lang-2.6.jar:/usr/local/hadoop/share/hadoop/common/lib/zookeeper-3.4.9.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-lang3-3.4.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-beanutils-1.9.3.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-client-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-util-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-util-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/common/lib/hadoop-auth-3.0.0.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-http-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar:/usr/local/hadoop/share/hadoop/common/lib/jersey-core-1.19.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-core-2.7.8.jar:/usr/local/hadoop/share/hadoop/common/lib/jsr311-api-1.1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/re2j-1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/htrace-core4-4.1.0-incubating.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-collections-3.2.2.jar:/usr/local/hadoop/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/usr/local/hadoop/share/hadoop/common/lib/curator-framework-2.12.0.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-configuration2-2.1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/nimbus-jose-jwt-4.41.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-xml-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-simplekdc-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/hamcrest-core-1.3.jar:/usr/local/hadoop/share/hadoop/common/lib/kerby-asn1-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/javax.servlet-api-3.1.0.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-net-3.1.jar:/usr/local/hadoop/share/hadoop/common/lib/json-smart-2.3.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-crypto-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-servlet-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-io-2.4.jar:/usr/local/hadoop/share/hadoop/common/lib/jcip-annotations-1.0-1.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-common-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-compress-1.4.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jersey-server-1.19.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-annotations-2.7.8.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/common/lib/httpcore-4.4.4.jar:/usr/local/hadoop/share/hadoop/common/lib/jaxb-api-2.2.11.jar:/usr/local/hadoop/share/hadoop/common/lib/metrics-core-3.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/accessors-smart-1.2.jar:/usr/local/hadoop/share/hadoop/common/lib/jersey-servlet-1.19.jar:/usr/local/hadoop/share/hadoop/common/lib/netty-3.10.5.Final.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-core-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jsp-api-2.1.jar:/usr/local/hadoop/share/hadoop/common/lib/kerby-util-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jsr305-3.0.0.jar:/usr/local/hadoop/share/hadoop/common/lib/jettison-1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-codec-1.4.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-io-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/common/lib/gson-2.2.4.jar:/usr/local/hadoop/share/hadoop/common/lib/kerby-pkix-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/guava-11.0.2.jar:/usr/local/hadoop/share/hadoop/common/lib/hadoop-annotations-3.0.0.jar:/usr/local/hadoop/share/hadoop/common/lib/stax2-api-3.1.4.jar:/usr/local/hadoop/share/hadoop/common/lib/kerby-config-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/slf4j-api-1.7.25.jar:/usr/local/hadoop/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/common/lib/jsch-0.1.54.jar:/usr/local/hadoop/share/hadoop/common/lib/mockito-all-1.8.5.jar:/usr/local/hadoop/share/hadoop/common/lib/woodstox-core-5.0.3.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/asm-5.0.4.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-identity-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/paranamer-2.3.jar:/usr/local/hadoop/share/hadoop/common/hadoop-nfs-3.0.0.jar:/usr/local/hadoop/share/hadoop/common/hadoop-common-3.0.0-tests.jar:/usr/local/hadoop/share/hadoop/common/hadoop-common-3.0.0.jar:/usr/local/hadoop/share/hadoop/common/hadoop-kms-3.0.0.jar:/usr/local/hadoop/share/hadoop/hdfs:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-webapp-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-security-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/snappy-java-1.0.5.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/xz-1.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerby-xdr-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-math3-3.1.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/token-provider-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/httpclient-4.5.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-admin-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/curator-recipes-2.12.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-databind-2.7.8.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-server-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jersey-json-1.19.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/curator-client-2.12.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-server-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/netty-all-4.0.23.Final.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/avro-1.7.7.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/zookeeper-3.4.9.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-lang3-3.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-beanutils-1.9.3.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-client-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-util-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-util-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/hadoop-auth-3.0.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-http-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jersey-core-1.19.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-core-2.7.8.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jsr311-api-1.1.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/re2j-1.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/htrace-core4-4.1.0-incubating.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-collections-3.2.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jaxb-impl-2.2.3-1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/curator-framework-2.12.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-configuration2-2.1.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/nimbus-jose-jwt-4.41.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-xml-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-simplekdc-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerby-asn1-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/javax.servlet-api-3.1.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-net-3.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/json-smart-2.3.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-crypto-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-servlet-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-io-2.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jcip-annotations-1.0-1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-common-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-compress-1.4.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jersey-server-1.19.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-annotations-2.7.8.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-xc-1.9.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/httpcore-4.4.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jaxb-api-2.2.11.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/accessors-smart-1.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-util-ajax-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jersey-servlet-1.19.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/netty-3.10.5.Final.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-core-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/okhttp-2.4.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerby-util-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jsr305-3.0.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jettison-1.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-codec-1.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-io-9.3.19.v20170502.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/gson-2.2.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerby-pkix-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/guava-11.0.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/okio-1.4.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/hadoop-annotations-3.0.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/stax2-api-3.1.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/json-simple-1.1.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerby-config-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jsch-0.1.54.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/woodstox-core-5.0.3.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-jaxrs-1.9.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/asm-5.0.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-identity-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/paranamer-2.3.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-nfs-3.0.0.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-3.0.0-tests.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-httpfs-3.0.0.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-native-client-3.0.0-tests.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-client-3.0.0-tests.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-native-client-3.0.0.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-3.0.0.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-client-3.0.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-nativetask-3.0.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-3.0.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.0.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.0.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-3.0.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-3.0.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-common-3.0.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-app-3.0.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.0.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.0.0-tests.jar:/usr/local/hadoop/share/hadoop/yarn:/usr/local/hadoop/share/hadoop/yarn/lib/servlet-api-2.5-6.1.14.jar:/usr/local/hadoop/share/hadoop/yarn/lib/hbase-hadoop-compat-1.2.6.jar:/usr/local/hadoop/share/hadoop/yarn/lib/hbase-prefix-tree-1.2.6.jar:/usr/local/hadoop/share/hadoop/yarn/lib/hbase-common-1.2.6.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-jaxrs-base-2.7.8.jar:/usr/local/hadoop/share/hadoop/yarn/lib/findbugs-annotations-1.3.9-1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/ehcache-3.3.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-guice-1.19.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-jaxrs-json-provider-2.7.8.jar:/usr/local/hadoop/share/hadoop/yarn/lib/hbase-procedure-1.2.6.jar:/usr/local/hadoop/share/hadoop/yarn/lib/guice-4.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/mssql-jdbc-6.2.1.jre7.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jasper-compiler-5.5.23.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jsp-api-2.1-6.1.14.jar:/usr/local/hadoop/share/hadoop/yarn/lib/metrics-core-2.2.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/java-util-1.9.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/hbase-hadoop2-compat-1.2.6.jar:/usr/local/hadoop/share/hadoop/yarn/lib/hbase-annotations-1.2.6.jar:/usr/local/hadoop/share/hadoop/yarn/lib/HikariCP-java7-2.4.12.jar:/usr/local/hadoop/share/hadoop/yarn/lib/htrace-core-3.1.0-incubating.jar:/usr/local/hadoop/share/hadoop/yarn/lib/hbase-server-1.2.6.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jasper-runtime-5.5.23.jar:/usr/local/hadoop/share/hadoop/yarn/lib/joni-2.1.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/fst-2.50.jar:/usr/local/hadoop/share/hadoop/yarn/lib/javax.inject-1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/guice-servlet-4.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-module-jaxb-annotations-2.7.8.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-csv-1.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/hbase-client-1.2.6.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-el-1.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/metrics-core-3.0.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jsp-2.1-6.1.14.jar:/usr/local/hadoop/share/hadoop/yarn/lib/aopalliance-1.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jcodings-1.0.8.jar:/usr/local/hadoop/share/hadoop/yarn/lib/hbase-protocol-1.2.6.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-httpclient-3.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/geronimo-jcache_1.0_spec-1.0-alpha-1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-client-1.19.jar:/usr/local/hadoop/share/hadoop/yarn/lib/disruptor-3.3.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/json-io-2.5.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jamon-runtime-2.4.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-math-2.2.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-tests-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-api-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-timeline-pluginstorage-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-common-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-client-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-registry-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-timelineservice-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-timelineservice-hbase-tests-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-router-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-web-proxy-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-common-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-nodemanager-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-timelineservice-hbase-3.0.0.jar
+STARTUP_MSG:   build = https://git-wip-us.apache.org/repos/asf/hadoop.git -r c25427ceca461ee979d30edd7a4b0f50718e6533; compiled by 'andrew' on 2017-12-08T19:16Z
+STARTUP_MSG:   java = 1.8.0_151
+************************************************************/
+2018-03-05 22:19:44,207 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+2018-03-05 22:19:44,212 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: createNameNode []
+2018-03-05 22:19:44,659 INFO org.apache.commons.beanutils.FluentPropertyBeanIntrospector: Error when creating PropertyDescriptor for public final void org.apache.commons.configuration2.AbstractConfiguration.setProperty(java.lang.String,java.lang.Object)! Ignoring this property.
+2018-03-05 22:19:44,718 INFO org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2018-03-05 22:19:44,876 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2018-03-05 22:19:44,876 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: NameNode metrics system started
+2018-03-05 22:19:44,908 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: fs.defaultFS is hdfs://localhost:54310
+2018-03-05 22:19:44,914 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: Clients are to use localhost:54310 to access this namenode/service.
+2018-03-05 22:19:45,226 INFO org.apache.hadoop.util.JvmPauseMonitor: Starting JVM pause monitor
+2018-03-05 22:19:45,260 INFO org.apache.hadoop.hdfs.DFSUtil: Starting Web-server for hdfs at: http://0.0.0.0:9870
+2018-03-05 22:19:45,280 INFO org.eclipse.jetty.util.log: Logging initialized @1946ms
+2018-03-05 22:19:45,568 INFO org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2018-03-05 22:19:45,613 INFO org.apache.hadoop.http.HttpRequestLog: Http request log for http.requests.namenode is not defined
+2018-03-05 22:19:45,624 INFO org.apache.hadoop.http.HttpServer2: Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2018-03-05 22:19:45,628 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context hdfs
+2018-03-05 22:19:45,629 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2018-03-05 22:19:45,629 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2018-03-05 22:19:45,741 INFO org.apache.hadoop.http.HttpServer2: Added filter 'org.apache.hadoop.hdfs.web.AuthFilter' (class=org.apache.hadoop.hdfs.web.AuthFilter)
+2018-03-05 22:19:45,749 INFO org.apache.hadoop.http.HttpServer2: addJerseyResourcePackage: packageName=org.apache.hadoop.hdfs.server.namenode.web.resources;org.apache.hadoop.hdfs.web.resources, pathSpec=/webhdfs/v1/*
+2018-03-05 22:19:45,785 INFO org.apache.hadoop.http.HttpServer2: Jetty bound to port 9870
+2018-03-05 22:19:45,796 INFO org.eclipse.jetty.server.Server: jetty-9.3.19.v20170502
+2018-03-05 22:19:45,967 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@72c8e7b{/logs,file:///usr/local/hadoop/logs/,AVAILABLE}
+2018-03-05 22:19:45,968 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@431cd9b2{/static,file:///usr/local/hadoop/share/hadoop/hdfs/webapps/static/,AVAILABLE}
+2018-03-05 22:19:46,195 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.w.WebAppContext@2205a05d{/,file:///usr/local/hadoop/share/hadoop/hdfs/webapps/hdfs/,AVAILABLE}{/hdfs}
+2018-03-05 22:19:46,246 INFO org.eclipse.jetty.server.AbstractConnector: Started ServerConnector@5e12e4d6{HTTP/1.1,[http/1.1]}{0.0.0.0:9870}
+2018-03-05 22:19:46,247 INFO org.eclipse.jetty.server.Server: Started @2914ms
+2018-03-05 22:19:46,855 WARN org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Only one image storage directory (dfs.namenode.name.dir) configured. Beware of data loss due to lack of redundant storage directories!
+2018-03-05 22:19:46,856 WARN org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Only one namespace edits storage directory (dfs.namenode.edits.dir) configured. Beware of data loss due to lack of redundant storage directories!
+2018-03-05 22:19:47,243 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Edit logging is async:true
+2018-03-05 22:19:47,276 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: KeyProvider: null
+2018-03-05 22:19:47,281 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsLock is fair: true
+2018-03-05 22:19:47,283 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Detailed lock hold time metrics enabled: false
+2018-03-05 22:19:47,298 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsOwner             = hduser (auth:SIMPLE)
+2018-03-05 22:19:47,298 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: supergroup          = supergroup
+2018-03-05 22:19:47,298 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isPermissionEnabled = true
+2018-03-05 22:19:47,298 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: HA Enabled: false
+2018-03-05 22:19:47,360 INFO org.apache.hadoop.hdfs.server.common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2018-03-05 22:19:47,374 INFO org.apache.hadoop.hdfs.server.blockmanagement.DatanodeManager: dfs.block.invalidate.limit: configured=1000, counted=60, effected=1000
+2018-03-05 22:19:47,374 INFO org.apache.hadoop.hdfs.server.blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+2018-03-05 22:19:47,379 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2018-03-05 22:19:47,379 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: The block deletion will start around 2018 Mar 05 22:19:47
+2018-03-05 22:19:47,381 INFO org.apache.hadoop.util.GSet: Computing capacity for map BlocksMap
+2018-03-05 22:19:47,381 INFO org.apache.hadoop.util.GSet: VM type       = 64-bit
+2018-03-05 22:19:47,383 INFO org.apache.hadoop.util.GSet: 2.0% max memory 1.3 GB = 26.5 MB
+2018-03-05 22:19:47,383 INFO org.apache.hadoop.util.GSet: capacity      = 2^22 = 4194304 entries
+2018-03-05 22:19:47,406 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: dfs.block.access.token.enable = false
+2018-03-05 22:19:47,415 INFO org.apache.hadoop.conf.Configuration.deprecation: No unit for dfs.namenode.safemode.extension(30000) assuming MILLISECONDS
+2018-03-05 22:19:47,415 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+2018-03-05 22:19:47,415 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.min.datanodes = 0
+2018-03-05 22:19:47,416 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.extension = 30000
+2018-03-05 22:19:47,416 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: defaultReplication         = 1
+2018-03-05 22:19:47,416 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxReplication             = 512
+2018-03-05 22:19:47,416 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: minReplication             = 1
+2018-03-05 22:19:47,416 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxReplicationStreams      = 2
+2018-03-05 22:19:47,416 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: redundancyRecheckInterval  = 3000ms
+2018-03-05 22:19:47,416 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: encryptDataTransfer        = false
+2018-03-05 22:19:47,416 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+2018-03-05 22:19:47,511 INFO org.apache.hadoop.util.GSet: Computing capacity for map INodeMap
+2018-03-05 22:19:47,511 INFO org.apache.hadoop.util.GSet: VM type       = 64-bit
+2018-03-05 22:19:47,512 INFO org.apache.hadoop.util.GSet: 1.0% max memory 1.3 GB = 13.3 MB
+2018-03-05 22:19:47,512 INFO org.apache.hadoop.util.GSet: capacity      = 2^21 = 2097152 entries
+2018-03-05 22:19:47,519 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: ACLs enabled? false
+2018-03-05 22:19:47,519 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: POSIX ACL inheritance enabled? true
+2018-03-05 22:19:47,519 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: XAttrs enabled? true
+2018-03-05 22:19:47,520 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: Caching file names occurring more than 10 times
+2018-03-05 22:19:47,557 INFO org.apache.hadoop.hdfs.server.namenode.snapshot.SnapshotManager: Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true
+2018-03-05 22:19:47,564 INFO org.apache.hadoop.util.GSet: Computing capacity for map cachedBlocks
+2018-03-05 22:19:47,565 INFO org.apache.hadoop.util.GSet: VM type       = 64-bit
+2018-03-05 22:19:47,565 INFO org.apache.hadoop.util.GSet: 0.25% max memory 1.3 GB = 3.3 MB
+2018-03-05 22:19:47,565 INFO org.apache.hadoop.util.GSet: capacity      = 2^19 = 524288 entries
+2018-03-05 22:19:47,594 INFO org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2018-03-05 22:19:47,597 INFO org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.num.users = 10
+2018-03-05 22:19:47,598 INFO org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics: NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2018-03-05 22:19:47,623 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Retry cache on namenode is enabled
+2018-03-05 22:19:47,623 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2018-03-05 22:19:47,626 INFO org.apache.hadoop.util.GSet: Computing capacity for map NameNodeRetryCache
+2018-03-05 22:19:47,629 INFO org.apache.hadoop.util.GSet: VM type       = 64-bit
+2018-03-05 22:19:47,630 INFO org.apache.hadoop.util.GSet: 0.029999999329447746% max memory 1.3 GB = 407.5 KB
+2018-03-05 22:19:47,630 INFO org.apache.hadoop.util.GSet: capacity      = 2^16 = 65536 entries
+2018-03-05 22:19:47,654 INFO org.apache.hadoop.hdfs.server.common.Storage: Lock on /app/hadoop/tmp/dfs/name/in_use.lock acquired by nodename 28136@jg-VirtualBox
+2018-03-05 22:19:47,711 INFO org.apache.hadoop.hdfs.server.namenode.FileJournalManager: Recovering unfinalized segments in /app/hadoop/tmp/dfs/name/current
+2018-03-05 22:19:47,780 INFO org.apache.hadoop.hdfs.server.namenode.FileJournalManager: Finalizing edits file /app/hadoop/tmp/dfs/name/current/edits_inprogress_0000000000000007965 -> /app/hadoop/tmp/dfs/name/current/edits_0000000000000007965-0000000000000008061
+2018-03-05 22:19:47,831 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Planning to load image: FSImageFile(file=/app/hadoop/tmp/dfs/name/current/fsimage_0000000000000007964, cpktTxId=0000000000000007964)
+2018-03-05 22:19:48,034 INFO org.apache.hadoop.hdfs.server.namenode.ErasureCodingPolicyManager: Enable the erasure coding policy RS-6-3-1024k
+2018-03-05 22:19:48,038 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatPBINode: Loading 122 INodes.
+2018-03-05 22:19:48,260 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Loaded FSImage in 0 seconds.
+2018-03-05 22:19:48,261 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Loaded image for txid 7964 from /app/hadoop/tmp/dfs/name/current/fsimage_0000000000000007964
+2018-03-05 22:19:48,261 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Reading org.apache.hadoop.hdfs.server.namenode.RedundantEditLogInputStream@1817f1eb expecting start txid #7965
+2018-03-05 22:19:48,262 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Start loading edits file /app/hadoop/tmp/dfs/name/current/edits_0000000000000007965-0000000000000008061
+2018-03-05 22:19:48,277 INFO org.apache.hadoop.hdfs.server.namenode.RedundantEditLogInputStream: Fast-forwarding stream '/app/hadoop/tmp/dfs/name/current/edits_0000000000000007965-0000000000000008061' to transaction ID 7965
+2018-03-05 22:19:48,763 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Edits file /app/hadoop/tmp/dfs/name/current/edits_0000000000000007965-0000000000000008061 of size 1048576 edits # 97 loaded in 0 seconds
+2018-03-05 22:19:48,765 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Need to save fs image? false (staleImage=false, haEnabled=false, isRollingUpgrade=false)
+2018-03-05 22:19:48,783 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Starting log segment at 8062
+2018-03-05 22:19:49,272 INFO org.apache.hadoop.hdfs.server.namenode.NameCache: initialized with 0 entries 0 lookups
+2018-03-05 22:19:49,272 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Finished loading FSImage in 1633 msecs
+2018-03-05 22:19:50,594 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: RPC server is binding to localhost:54310
+2018-03-05 22:19:50,618 INFO org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue queueCapacity: 1000 scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler
+2018-03-05 22:19:50,657 INFO org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 54310
+2018-03-05 22:19:51,419 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Registered FSNamesystemState, ReplicatedBlocksState and ECBlockGroupsState MBeans.
+2018-03-05 22:19:51,463 INFO org.apache.hadoop.hdfs.server.namenode.LeaseManager: Number of blocks under construction: 0
+2018-03-05 22:19:51,508 INFO org.apache.hadoop.hdfs.StateChange: STATE* Safe mode ON. 
+The reported blocks 0 needs additional 55 blocks to reach the threshold 0.9990 of total blocks 56.
+The number of live datanodes 0 has reached the minimum number 0. Safe mode will be turned off automatically once the thresholds have been reached.
+2018-03-05 22:19:51,699 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: NameNode RPC up at: localhost/127.0.0.1:54310
+2018-03-05 22:19:51,697 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2018-03-05 22:19:51,698 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 54310: starting
+2018-03-05 22:19:51,746 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Starting services required for active state
+2018-03-05 22:19:51,746 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: Initializing quota with 4 thread(s)
+2018-03-05 22:19:51,781 INFO org.apache.hadoop.hdfs.server.namenode.FSDirectory: Quota initialization completed in 35 milliseconds
+name space=124
+storage space=1816967414
+storage types=RAM_DISK=0, SSD=0, DISK=0, ARCHIVE=0
+2018-03-05 22:19:51,850 INFO org.apache.hadoop.hdfs.server.blockmanagement.CacheReplicationMonitor: Starting CacheReplicationMonitor with interval 30000 milliseconds
+2018-03-05 22:19:56,195 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* registerDatanode: from DatanodeRegistration(127.0.0.1:9866, datanodeUuid=0b293c3c-074e-4008-a2f9-e365d3b9745a, infoPort=9864, infoSecurePort=0, ipcPort=9867, storageInfo=lv=-57;cid=CID-1f076e69-66fc-4a96-a943-6b1ee82d7803;nsid=2098376509;c=1518465950403) storage 0b293c3c-074e-4008-a2f9-e365d3b9745a
+2018-03-05 22:19:56,196 INFO org.apache.hadoop.net.NetworkTopology: Adding a new node: /default-rack/127.0.0.1:9866
+2018-03-05 22:19:56,213 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockReportLeaseManager: Registered DN 0b293c3c-074e-4008-a2f9-e365d3b9745a (127.0.0.1:9866).
+2018-03-05 22:19:56,535 INFO org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor: Adding new storage ID DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1 for DN 127.0.0.1:9866
+2018-03-05 22:19:56,708 INFO BlockStateChange: BLOCK* processReport 0x18b2f7350a96dacc: Processing first storage report for DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1 from datanode 0b293c3c-074e-4008-a2f9-e365d3b9745a
+2018-03-05 22:19:56,736 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: initializing replication queues
+2018-03-05 22:19:56,737 INFO org.apache.hadoop.hdfs.StateChange: STATE* Safe mode extension entered. 
+The reported blocks 55 has reached the threshold 0.9990 of total blocks 56. The number of live datanodes 1 has reached the minimum number 0. In safe mode extension. Safe mode will be turned off automatically in 29 seconds.
+2018-03-05 22:19:56,747 INFO BlockStateChange: BLOCK* processReport 0x18b2f7350a96dacc: from storage DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1 node DatanodeRegistration(127.0.0.1:9866, datanodeUuid=0b293c3c-074e-4008-a2f9-e365d3b9745a, infoPort=9864, infoSecurePort=0, ipcPort=9867, storageInfo=lv=-57;cid=CID-1f076e69-66fc-4a96-a943-6b1ee82d7803;nsid=2098376509;c=1518465950403), blocks: 56, hasStaleStorage: false, processing time: 39 msecs, invalidatedBlocks: 0
+2018-03-05 22:19:56,777 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Total number of blocks            = 56
+2018-03-05 22:19:56,778 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Number of invalid blocks          = 0
+2018-03-05 22:19:56,778 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Number of under-replicated blocks = 7
+2018-03-05 22:19:56,778 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Number of  over-replicated blocks = 0
+2018-03-05 22:19:56,778 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: Number of blocks being written    = 0
+2018-03-05 22:19:56,778 INFO org.apache.hadoop.hdfs.StateChange: STATE* Replication Queue initialization scan for invalid, over- and under-replicated blocks completed in 41 msec
+2018-03-05 22:20:16,809 INFO org.apache.hadoop.hdfs.StateChange: STATE* Safe mode ON, in safe mode extension. 
+The reported blocks 56 has reached the threshold 0.9990 of total blocks 56. The number of live datanodes 1 has reached the minimum number 0. In safe mode extension. Safe mode will be turned off automatically in 9 seconds.
+2018-03-05 22:20:26,820 INFO org.apache.hadoop.hdfs.StateChange: STATE* Safe mode is OFF
+2018-03-05 22:20:26,820 INFO org.apache.hadoop.hdfs.StateChange: STATE* Leaving safe mode after 35 secs
+2018-03-05 22:20:26,820 INFO org.apache.hadoop.hdfs.StateChange: STATE* Network topology has 1 racks and 1 datanodes
+2018-03-05 22:20:26,820 INFO org.apache.hadoop.hdfs.StateChange: STATE* UnderReplicatedBlocks has 7 blocks
+2018-03-05 22:20:30,015 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742727_1911, replicas=127.0.0.1:9866 for /hbase/WALs/jg-virtualbox,37467,1520306426524/jg-virtualbox%2C37467%2C1520306426524.default.1520306429913
+2018-03-05 22:20:30,291 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /hbase/WALs/jg-virtualbox,37467,1520306426524/jg-virtualbox%2C37467%2C1520306426524.default.1520306429913 for DFSClient_NONMAPREDUCE_1817040119_1
+2018-03-05 22:20:34,329 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742728_1912, replicas=127.0.0.1:9866 for /hbase/WALs/jg-virtualbox,37467,1520306426524/jg-virtualbox%2C37467%2C1520306426524..meta.1520306434290.meta
+2018-03-05 22:20:34,353 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /hbase/WALs/jg-virtualbox,37467,1520306426524/jg-virtualbox%2C37467%2C1520306426524..meta.1520306434290.meta for DFSClient_NONMAPREDUCE_1817040119_1
+2018-03-05 22:20:35,283 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/data/hbase/meta/1588230740/recovered.edits/76.seqid is closed by DFSClient_NONMAPREDUCE_1817040119_1
+2018-03-05 22:20:35,729 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742729_1913, replicas=127.0.0.1:9866 for /hbase/MasterProcWALs/state-00000000000000000060.log
+2018-03-05 22:20:35,744 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /hbase/MasterProcWALs/state-00000000000000000060.log for DFSClient_NONMAPREDUCE_1817040119_1
+2018-03-05 22:20:36,136 INFO org.apache.hadoop.ipc.Server: IPC Server handler 5 on 54310, call Call#100 Retry#0 org.apache.hadoop.hdfs.protocol.ClientProtocol.delete from 127.0.0.1:43020
+org.apache.hadoop.fs.PathIsNotEmptyDirectoryException: `/hbase/WALs/jg-virtualbox,43763,1518632723596-splitting is non empty': Directory is not empty
+	at org.apache.hadoop.hdfs.server.namenode.FSDirDeleteOp.delete(FSDirDeleteOp.java:116)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.delete(FSNamesystem.java:2891)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.delete(NameNodeRpcServer.java:1084)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.delete(ClientNamenodeProtocolServerSideTranslatorPB.java:680)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:523)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:991)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:869)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:815)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1962)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2675)
+2018-03-05 22:20:36,289 INFO org.apache.hadoop.ipc.Server: IPC Server handler 6 on 54310, call Call#119 Retry#0 org.apache.hadoop.hdfs.protocol.ClientProtocol.delete from 127.0.0.1:43020
+org.apache.hadoop.fs.PathIsNotEmptyDirectoryException: `/hbase/WALs/jg-virtualbox,39927,1518701542856-splitting is non empty': Directory is not empty
+	at org.apache.hadoop.hdfs.server.namenode.FSDirDeleteOp.delete(FSDirDeleteOp.java:116)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.delete(FSNamesystem.java:2891)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.delete(NameNodeRpcServer.java:1084)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.delete(ClientNamenodeProtocolServerSideTranslatorPB.java:680)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:523)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:991)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:869)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:815)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1962)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2675)
+2018-03-05 22:20:36,434 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/data/hbase/namespace/70d62807e80b51bad7d48f8ffb7f868c/recovered.edits/28.seqid is closed by DFSClient_NONMAPREDUCE_1817040119_1
+2018-03-05 22:20:36,495 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/data/default/mytable/4930e2e7307e1f94b4eebcb3ca1f596f/recovered.edits/36.seqid is closed by DFSClient_NONMAPREDUCE_1817040119_1
+2018-03-05 22:20:56,665 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 33 Total time for transactions(ms): 38 Number of transactions batched in Syncs: 8066 Number of syncs: 28 SyncTimes(ms): 48 
+2018-03-05 22:20:56,833 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742730_1914, replicas=127.0.0.1:9866 for /usr/hduser/flume/tweets/FlumeData.1520306453005.tmp
+2018-03-05 22:20:59,788 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/MasterProcWALs/state-00000000000000000060.log is closed by DFSClient_NONMAPREDUCE_1817040119_1
+2018-03-05 22:21:00,364 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 127.0.0.1
+2018-03-05 22:21:00,364 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Rolling edit logs
+2018-03-05 22:21:00,364 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Ending log segment 8062, 8100
+2018-03-05 22:21:00,367 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 40 Total time for transactions(ms): 39 Number of transactions batched in Syncs: 8068 Number of syncs: 34 SyncTimes(ms): 55 
+2018-03-05 22:21:00,372 INFO org.apache.hadoop.hdfs.server.namenode.FileJournalManager: Finalizing edits file /app/hadoop/tmp/dfs/name/current/edits_inprogress_0000000000000008062 -> /app/hadoop/tmp/dfs/name/current/edits_0000000000000008062-0000000000000008101
+2018-03-05 22:21:00,376 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Starting log segment at 8102
+2018-03-05 22:21:00,743 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Sending fileName: /app/hadoop/tmp/dfs/name/current/fsimage_0000000000000007964, fileSize: 10394. Sent total: 10394 bytes. Size of last segment intended to send: -1 bytes.
+2018-03-05 22:21:00,785 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Sending fileName: /app/hadoop/tmp/dfs/name/current/edits_0000000000000007965-0000000000000008061, fileSize: 1048576. Sent total: 1048576 bytes. Size of last segment intended to send: -1 bytes.
+2018-03-05 22:21:00,822 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Sending fileName: /app/hadoop/tmp/dfs/name/current/edits_0000000000000008062-0000000000000008101, fileSize: 4712. Sent total: 4712 bytes. Size of last segment intended to send: -1 bytes.
+2018-03-05 22:21:01,653 INFO org.apache.hadoop.hdfs.server.common.Util: Combined time for file download and fsync to all disks took 0.00s. The file download took 0.00s at 5000.00 KB/s. Synchronous (fsync) write to disk of /app/hadoop/tmp/dfs/name/current/fsimage.ckpt_0000000000000008101 took 0.00s.
+2018-03-05 22:21:01,653 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Downloaded file fsimage.ckpt_0000000000000008101 size 10570 bytes.
+2018-03-05 22:21:01,660 INFO org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager: Going to retain 2 images with txid >= 7964
+2018-03-05 22:21:01,661 INFO org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager: Purging old image FSImageFile(file=/app/hadoop/tmp/dfs/name/current/fsimage_0000000000000007900, cpktTxId=0000000000000007900)
+2018-03-05 22:21:14,241 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /usr/hduser/flume/tweets/FlumeData.1520306453005.tmp for DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:22:29,548 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 3 Total time for transactions(ms): 1 Number of transactions batched in Syncs: 0 Number of syncs: 3 SyncTimes(ms): 51 
+2018-03-05 22:24:27,272 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /usr/hduser/flume/tweets/FlumeData.1520306453005.tmp is closed by DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:24:27,273 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 5 Total time for transactions(ms): 1 Number of transactions batched in Syncs: 0 Number of syncs: 5 SyncTimes(ms): 53 
+2018-03-05 22:24:27,513 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742731_1915, replicas=127.0.0.1:9866 for /usr/hduser/flume/tweets/FlumeData.1520306453006.tmp
+2018-03-05 22:24:48,863 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /usr/hduser/flume/tweets/FlumeData.1520306453006.tmp for DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:28:01,296 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /usr/hduser/flume/tweets/FlumeData.1520306453006.tmp is closed by DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:28:01,296 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 12 Total time for transactions(ms): 2 Number of transactions batched in Syncs: 1 Number of syncs: 11 SyncTimes(ms): 62 
+2018-03-05 22:28:01,509 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742732_1916, replicas=127.0.0.1:9866 for /usr/hduser/flume/tweets/FlumeData.1520306453007.tmp
+2018-03-05 22:28:22,996 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /usr/hduser/flume/tweets/FlumeData.1520306453007.tmp for DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:29:51,491 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: StorageInfo TreeSet fill ratio DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1 : 1.0
+2018-03-05 22:30:22,376 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 19 Total time for transactions(ms): 4 Number of transactions batched in Syncs: 3 Number of syncs: 16 SyncTimes(ms): 72 
+2018-03-05 22:30:22,405 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742733_1917, replicas=127.0.0.1:9866 for /hbase/data/hbase/meta/1588230740/.tmp/83eb5a205bf84ff89ad5549ed432d250
+2018-03-05 22:30:22,422 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/data/hbase/meta/1588230740/.tmp/83eb5a205bf84ff89ad5549ed432d250 is closed by DFSClient_NONMAPREDUCE_1817040119_1
+2018-03-05 22:31:36,237 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /usr/hduser/flume/tweets/FlumeData.1520306453007.tmp is closed by DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:31:36,237 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 26 Total time for transactions(ms): 5 Number of transactions batched in Syncs: 5 Number of syncs: 21 SyncTimes(ms): 79 
+2018-03-05 22:31:36,375 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742734_1918, replicas=127.0.0.1:9866 for /usr/hduser/flume/tweets/FlumeData.1520306453008.tmp
+2018-03-05 22:31:58,338 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /usr/hduser/flume/tweets/FlumeData.1520306453008.tmp for DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:35:14,089 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /usr/hduser/flume/tweets/FlumeData.1520306453008.tmp is closed by DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:35:14,090 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 33 Total time for transactions(ms): 5 Number of transactions batched in Syncs: 7 Number of syncs: 26 SyncTimes(ms): 86 
+2018-03-05 22:35:14,297 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742735_1919, replicas=127.0.0.1:9866 for /usr/hduser/flume/tweets/FlumeData.1520306453009.tmp
+2018-03-05 22:35:35,340 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /usr/hduser/flume/tweets/FlumeData.1520306453009.tmp for DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:38:45,343 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /usr/hduser/flume/tweets/FlumeData.1520306453009.tmp is closed by DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:38:45,343 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 40 Total time for transactions(ms): 6 Number of transactions batched in Syncs: 8 Number of syncs: 32 SyncTimes(ms): 94 
+2018-03-05 22:38:45,520 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742736_1920, replicas=127.0.0.1:9866 for /usr/hduser/flume/tweets/FlumeData.1520306453010.tmp
+2018-03-05 22:39:06,181 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /usr/hduser/flume/tweets/FlumeData.1520306453010.tmp for DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:39:51,492 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: StorageInfo TreeSet fill ratio DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1 : 1.0
+2018-03-05 22:42:18,678 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /usr/hduser/flume/tweets/FlumeData.1520306453010.tmp is closed by DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:42:18,678 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 47 Total time for transactions(ms): 7 Number of transactions batched in Syncs: 9 Number of syncs: 38 SyncTimes(ms): 103 
+2018-03-05 22:42:18,960 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742737_1921, replicas=127.0.0.1:9866 for /usr/hduser/flume/tweets/FlumeData.1520306453011.tmp
+2018-03-05 22:42:39,567 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /usr/hduser/flume/tweets/FlumeData.1520306453011.tmp for DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:45:50,042 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /usr/hduser/flume/tweets/FlumeData.1520306453011.tmp is closed by DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:45:50,042 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 54 Total time for transactions(ms): 7 Number of transactions batched in Syncs: 11 Number of syncs: 43 SyncTimes(ms): 110 
+2018-03-05 22:45:50,246 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742738_1922, replicas=127.0.0.1:9866 for /usr/hduser/flume/tweets/FlumeData.1520306453012.tmp
+2018-03-05 22:46:10,942 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /usr/hduser/flume/tweets/FlumeData.1520306453012.tmp for DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:49:22,179 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /usr/hduser/flume/tweets/FlumeData.1520306453012.tmp is closed by DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:49:22,179 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 61 Total time for transactions(ms): 10 Number of transactions batched in Syncs: 12 Number of syncs: 49 SyncTimes(ms): 116 
+2018-03-05 22:49:22,355 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742739_1923, replicas=127.0.0.1:9866 for /usr/hduser/flume/tweets/FlumeData.1520306453013.tmp
+2018-03-05 22:49:43,427 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /usr/hduser/flume/tweets/FlumeData.1520306453013.tmp for DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:49:51,493 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: StorageInfo TreeSet fill ratio DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1 : 1.0
+2018-03-05 22:51:11,616 INFO BlockStateChange: BLOCK* processReport 0x18b2f7350a96dacd: from storage DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1 node DatanodeRegistration(127.0.0.1:9866, datanodeUuid=0b293c3c-074e-4008-a2f9-e365d3b9745a, infoPort=9864, infoSecurePort=0, ipcPort=9867, storageInfo=lv=-57;cid=CID-1f076e69-66fc-4a96-a943-6b1ee82d7803;nsid=2098376509;c=1518465950403), blocks: 65, hasStaleStorage: false, processing time: 2 msecs, invalidatedBlocks: 0
+2018-03-05 22:52:55,700 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /usr/hduser/flume/tweets/FlumeData.1520306453013.tmp is closed by DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:52:55,700 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 68 Total time for transactions(ms): 12 Number of transactions batched in Syncs: 14 Number of syncs: 54 SyncTimes(ms): 121 
+2018-03-05 22:52:55,870 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742740_1924, replicas=127.0.0.1:9866 for /usr/hduser/flume/tweets/FlumeData.1520306453014.tmp
+2018-03-05 22:53:16,920 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /usr/hduser/flume/tweets/FlumeData.1520306453014.tmp for DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:56:30,101 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /usr/hduser/flume/tweets/FlumeData.1520306453014.tmp is closed by DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:56:30,109 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 75 Total time for transactions(ms): 13 Number of transactions batched in Syncs: 16 Number of syncs: 59 SyncTimes(ms): 126 
+2018-03-05 22:56:30,198 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742741_1925, replicas=127.0.0.1:9866 for /usr/hduser/flume/tweets/FlumeData.1520306453015.tmp
+2018-03-05 22:56:51,383 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /usr/hduser/flume/tweets/FlumeData.1520306453015.tmp for DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:56:58,760 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /usr/hduser/flume/tweets/FlumeData.1520306453015.tmp is closed by DFSClient_NONMAPREDUCE_-651158138_25
+2018-03-05 22:57:30,668 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 92 Total time for transactions(ms): 15 Number of transactions batched in Syncs: 18 Number of syncs: 74 SyncTimes(ms): 146 
+2018-03-05 22:59:51,494 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: StorageInfo TreeSet fill ratio DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1 : 1.0
+2018-03-05 23:04:05,844 INFO org.apache.hadoop.util.JvmPauseMonitor: Detected pause in JVM or host machine (eg GC): pause of approximately 1303ms
+No GCs detected
+2018-03-05 23:05:51,166 INFO org.apache.hadoop.util.JvmPauseMonitor: Detected pause in JVM or host machine (eg GC): pause of approximately 1089ms
+No GCs detected
+2018-03-05 23:09:51,558 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: StorageInfo TreeSet fill ratio DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1 : 1.0
+2018-03-05 23:19:51,562 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: StorageInfo TreeSet fill ratio DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1 : 1.0
+2018-03-05 23:19:54,806 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* removeDeadDatanode: lost heartbeat from 127.0.0.1:9866, removeBlocksFromBlockMap true
+2018-03-05 23:19:55,115 INFO org.apache.hadoop.net.NetworkTopology: Removing a node: /default-rack/127.0.0.1:9866
+2018-03-05 23:20:23,996 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 104 Total time for transactions(ms): 43 Number of transactions batched in Syncs: 18 Number of syncs: 86 SyncTimes(ms): 158 
+2018-03-05 23:22:48,984 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 105 Total time for transactions(ms): 47 Number of transactions batched in Syncs: 18 Number of syncs: 87 SyncTimes(ms): 165 
+2018-03-05 23:22:49,141 INFO org.apache.hadoop.ipc.Server: IPC Server handler 7 on 54310, call Call#5 Retry#0 org.apache.hadoop.hdfs.protocol.ClientProtocol.addBlock from 127.0.0.1:43628
+java.io.IOException: File /usr/hduser/flume/wordcount_Jonathan/keywords.txt._COPYING_ could only be written to 0 of the 1 minReplication nodes. There are 0 datanode(s) running and no node(s) are excluded in this operation.
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.chooseTarget4NewBlock(BlockManager.java:2101)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirWriteFileOp.chooseTargetForNewBlock(FSDirWriteFileOp.java:287)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getAdditionalBlock(FSNamesystem.java:2602)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.addBlock(NameNodeRpcServer.java:864)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.addBlock(ClientNamenodeProtocolServerSideTranslatorPB.java:549)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:523)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:991)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:869)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:815)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1962)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2675)
+2018-03-05 23:23:53,228 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 108 Total time for transactions(ms): 47 Number of transactions batched in Syncs: 18 Number of syncs: 90 SyncTimes(ms): 170 
+2018-03-05 23:23:53,313 INFO org.apache.hadoop.ipc.Server: IPC Server handler 2 on 54310, call Call#5 Retry#0 org.apache.hadoop.hdfs.protocol.ClientProtocol.addBlock from 127.0.0.1:43632
+java.io.IOException: File /usr/hduser/flume/wordcount_JMG/keywords.txt._COPYING_ could only be written to 0 of the 1 minReplication nodes. There are 0 datanode(s) running and no node(s) are excluded in this operation.
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.chooseTarget4NewBlock(BlockManager.java:2101)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirWriteFileOp.chooseTargetForNewBlock(FSDirWriteFileOp.java:287)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getAdditionalBlock(FSNamesystem.java:2602)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.addBlock(NameNodeRpcServer.java:864)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.addBlock(ClientNamenodeProtocolServerSideTranslatorPB.java:549)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:523)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:991)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:869)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:815)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1962)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2675)
+2018-03-05 23:24:34,329 INFO org.apache.hadoop.ipc.Server: IPC Server handler 6 on 54310, call Call#3 Retry#0 org.apache.hadoop.hdfs.protocol.ClientProtocol.create from 127.0.0.1:43634: org.apache.hadoop.security.AccessControlException: Permission denied: user=jg, access=WRITE, inode="/usr/hduser/flume/wordcount_JMG":hduser:supergroup:drwxr-xr-x
+2018-03-05 23:29:18,845 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 110 Total time for transactions(ms): 48 Number of transactions batched in Syncs: 18 Number of syncs: 92 SyncTimes(ms): 177 
+2018-03-05 23:29:51,566 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: StorageInfo TreeSet fill ratio DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1 : 1.0
+2018-03-05 23:30:39,732 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 111 Total time for transactions(ms): 48 Number of transactions batched in Syncs: 18 Number of syncs: 93 SyncTimes(ms): 178 
+2018-03-05 23:30:39,809 INFO org.apache.hadoop.ipc.Server: IPC Server handler 4 on 54310, call Call#5 Retry#0 org.apache.hadoop.hdfs.protocol.ClientProtocol.addBlock from 127.0.0.1:43650
+java.io.IOException: File /usr/hduser/flume/wordcount_keywords/keywords.txt._COPYING_ could only be written to 0 of the 1 minReplication nodes. There are 0 datanode(s) running and no node(s) are excluded in this operation.
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.chooseTarget4NewBlock(BlockManager.java:2101)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirWriteFileOp.chooseTargetForNewBlock(FSDirWriteFileOp.java:287)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getAdditionalBlock(FSNamesystem.java:2602)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.addBlock(NameNodeRpcServer.java:864)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.addBlock(ClientNamenodeProtocolServerSideTranslatorPB.java:549)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:523)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:991)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:869)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:815)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1962)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2675)
+2018-03-05 23:31:35,515 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* registerDatanode: from DatanodeRegistration(127.0.0.1:9866, datanodeUuid=0b293c3c-074e-4008-a2f9-e365d3b9745a, infoPort=9864, infoSecurePort=0, ipcPort=9867, storageInfo=lv=-57;cid=CID-1f076e69-66fc-4a96-a943-6b1ee82d7803;nsid=2098376509;c=1518465950403) storage 0b293c3c-074e-4008-a2f9-e365d3b9745a
+2018-03-05 23:31:35,516 INFO org.apache.hadoop.net.NetworkTopology: Removing a node: /default-rack/127.0.0.1:9866
+2018-03-05 23:31:35,523 INFO org.apache.hadoop.net.NetworkTopology: Adding a new node: /default-rack/127.0.0.1:9866
+2018-03-05 23:31:35,524 INFO org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor: [DISK]DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1:NORMAL:127.0.0.1:9866 failed.
+2018-03-05 23:31:35,526 INFO org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor: Removed storage [DISK]DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1:FAILED:127.0.0.1:9866 from DataNode 127.0.0.1:9866
+2018-03-05 23:31:35,704 INFO org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor: Adding new storage ID DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1 for DN 127.0.0.1:9866
+2018-03-05 23:31:35,720 WARN org.apache.hadoop.hdfs.server.blockmanagement.BlockReportLeaseManager: DN 0b293c3c-074e-4008-a2f9-e365d3b9745a (127.0.0.1:9866) requested a lease even though it wasn't yet registered.  Registering now.
+2018-03-05 23:31:35,722 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockReportLeaseManager: Registered DN 0b293c3c-074e-4008-a2f9-e365d3b9745a (127.0.0.1:9866).
+2018-03-05 23:31:35,808 INFO BlockStateChange: BLOCK* processReport 0x84d2bd413451836d: Processing first storage report for DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1 from datanode 0b293c3c-074e-4008-a2f9-e365d3b9745a
+2018-03-05 23:31:35,826 INFO BlockStateChange: BLOCK* processReport 0x84d2bd413451836d: from storage DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1 node DatanodeRegistration(127.0.0.1:9866, datanodeUuid=0b293c3c-074e-4008-a2f9-e365d3b9745a, infoPort=9864, infoSecurePort=0, ipcPort=9867, storageInfo=lv=-57;cid=CID-1f076e69-66fc-4a96-a943-6b1ee82d7803;nsid=2098376509;c=1518465950403), blocks: 67, hasStaleStorage: false, processing time: 18 msecs, invalidatedBlocks: 0
+2018-03-05 23:32:00,290 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 113 Total time for transactions(ms): 48 Number of transactions batched in Syncs: 18 Number of syncs: 95 SyncTimes(ms): 183 
+2018-03-05 23:32:01,823 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: recoverLease: [Lease.  Holder: DFSClient_NONMAPREDUCE_1817040119_1, pending creates: 3], src=/hbase/MasterProcWALs/state-00000000000000000061.log from client DFSClient_NONMAPREDUCE_1817040119_1
+2018-03-05 23:32:01,825 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Recovering [Lease.  Holder: DFSClient_NONMAPREDUCE_1817040119_1, pending creates: 3], src=/hbase/MasterProcWALs/state-00000000000000000061.log
+2018-03-05 23:32:01,830 WARN org.apache.hadoop.hdfs.StateChange: BLOCK* internalReleaseLease: All existing blocks are COMPLETE, lease removed, file /hbase/MasterProcWALs/state-00000000000000000061.log closed.
+2018-03-05 23:32:04,393 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742742_1926, replicas=127.0.0.1:9866 for /hbase/WALs/jg-virtualbox,43667,1520310712672/jg-virtualbox%2C43667%2C1520310712672.default.1520310724271
+2018-03-05 23:32:04,582 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /hbase/WALs/jg-virtualbox,43667,1520310712672/jg-virtualbox%2C43667%2C1520310712672.default.1520310724271 for DFSClient_NONMAPREDUCE_-1532081765_1
+2018-03-05 23:32:06,831 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: recoverLease: [Lease.  Holder: DFSClient_NONMAPREDUCE_1817040119_1, pending creates: 2], src=/hbase/WALs/jg-virtualbox,37467,1520306426524-splitting/jg-virtualbox%2C37467%2C1520306426524..meta.1520306434290.meta from client DFSClient_NONMAPREDUCE_1817040119_1
+2018-03-05 23:32:06,832 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Recovering [Lease.  Holder: DFSClient_NONMAPREDUCE_1817040119_1, pending creates: 2], src=/hbase/WALs/jg-virtualbox,37467,1520306426524-splitting/jg-virtualbox%2C37467%2C1520306426524..meta.1520306434290.meta
+2018-03-05 23:32:06,854 WARN org.apache.hadoop.hdfs.StateChange: DIR* NameSystem.internalReleaseLease: File /hbase/WALs/jg-virtualbox,37467,1520306426524-splitting/jg-virtualbox%2C37467%2C1520306426524..meta.1520306434290.meta has not been closed. Lease recovery is in progress. RecoveryId = 1927 for block blk_1073742728_1912
+2018-03-05 23:32:08,761 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: commitBlockSynchronization(oldBlock=BP-698753774-127.0.1.1-1518465950403:blk_1073742728_1912, newgenerationstamp=1927, newlength=1628, newtargets=[127.0.0.1:9866], closeFile=true, deleteBlock=false)
+2018-03-05 23:32:08,789 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: commitBlockSynchronization(oldBlock=BP-698753774-127.0.1.1-1518465950403:blk_1073742728_1912, file=/hbase/WALs/jg-virtualbox,37467,1520306426524-splitting/jg-virtualbox%2C37467%2C1520306426524..meta.1520306434290.meta, newgenerationstamp=1927, newlength=1628, newtargets=[127.0.0.1:9866]) successful
+2018-03-05 23:32:09,928 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742743_1928, replicas=127.0.0.1:9866 for /usr/hduser/flume/wordcount_keywords/keywords.txt._COPYING_
+2018-03-05 23:32:10,105 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /usr/hduser/flume/wordcount_keywords/keywords.txt._COPYING_ is closed by DFSClient_NONMAPREDUCE_1415710139_1
+2018-03-05 23:32:11,008 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742744_1929, replicas=127.0.0.1:9866 for /hbase/data/hbase/meta/1588230740/recovered.edits/0000000000000000078.temp
+2018-03-05 23:32:11,049 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/data/hbase/meta/1588230740/recovered.edits/0000000000000000078.temp is closed by DFSClient_NONMAPREDUCE_-1532081765_1
+2018-03-05 23:32:11,120 INFO org.apache.hadoop.ipc.Server: IPC Server handler 2 on 54310, call Call#80 Retry#0 org.apache.hadoop.hdfs.protocol.ClientProtocol.delete from 127.0.0.1:43672
+org.apache.hadoop.fs.PathIsNotEmptyDirectoryException: `/hbase/WALs/jg-virtualbox,37467,1520306426524-splitting is non empty': Directory is not empty
+	at org.apache.hadoop.hdfs.server.namenode.FSDirDeleteOp.delete(FSDirDeleteOp.java:116)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.delete(FSNamesystem.java:2891)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.delete(NameNodeRpcServer.java:1084)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.delete(ClientNamenodeProtocolServerSideTranslatorPB.java:680)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:523)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:991)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:869)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:815)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1962)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2675)
+2018-03-05 23:32:11,197 INFO org.apache.hadoop.ipc.Server: IPC Server handler 6 on 54310, call Call#87 Retry#0 org.apache.hadoop.hdfs.protocol.ClientProtocol.delete from 127.0.0.1:43672
+org.apache.hadoop.fs.PathIsNotEmptyDirectoryException: `/hbase/WALs/jg-virtualbox,37467,1520306426524-splitting is non empty': Directory is not empty
+	at org.apache.hadoop.hdfs.server.namenode.FSDirDeleteOp.delete(FSDirDeleteOp.java:116)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.delete(FSNamesystem.java:2891)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.delete(NameNodeRpcServer.java:1084)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.delete(ClientNamenodeProtocolServerSideTranslatorPB.java:680)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:523)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:991)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:869)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:815)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1962)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2675)
+2018-03-05 23:32:11,403 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742745_1930, replicas=127.0.0.1:9866 for /hbase/WALs/jg-virtualbox,43667,1520310712672/jg-virtualbox%2C43667%2C1520310712672..meta.1520310731389.meta
+2018-03-05 23:32:11,451 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /hbase/WALs/jg-virtualbox,43667,1520310712672/jg-virtualbox%2C43667%2C1520310712672..meta.1520310731389.meta for DFSClient_NONMAPREDUCE_-1532081765_1
+2018-03-05 23:32:12,545 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/data/hbase/meta/1588230740/recovered.edits/82.seqid is closed by DFSClient_NONMAPREDUCE_-1532081765_1
+2018-03-05 23:32:13,178 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742746_1931, replicas=127.0.0.1:9866 for /hbase/MasterProcWALs/state-00000000000000000062.log
+2018-03-05 23:32:13,193 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* fsync: /hbase/MasterProcWALs/state-00000000000000000062.log for DFSClient_NONMAPREDUCE_-1532081765_1
+2018-03-05 23:32:13,453 INFO org.apache.hadoop.ipc.Server: IPC Server handler 6 on 54310, call Call#135 Retry#0 org.apache.hadoop.hdfs.protocol.ClientProtocol.delete from 127.0.0.1:43672
+org.apache.hadoop.fs.PathIsNotEmptyDirectoryException: `/hbase/WALs/jg-virtualbox,43763,1518632723596-splitting is non empty': Directory is not empty
+	at org.apache.hadoop.hdfs.server.namenode.FSDirDeleteOp.delete(FSDirDeleteOp.java:116)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.delete(FSNamesystem.java:2891)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.delete(NameNodeRpcServer.java:1084)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.delete(ClientNamenodeProtocolServerSideTranslatorPB.java:680)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:523)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:991)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:869)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:815)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1962)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2675)
+2018-03-05 23:32:13,624 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: recoverLease: [Lease.  Holder: DFSClient_NONMAPREDUCE_1817040119_1, pending creates: 1], src=/hbase/WALs/jg-virtualbox,37467,1520306426524-splitting/jg-virtualbox%2C37467%2C1520306426524.default.1520306429913 from client DFSClient_NONMAPREDUCE_1817040119_1
+2018-03-05 23:32:13,624 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Recovering [Lease.  Holder: DFSClient_NONMAPREDUCE_1817040119_1, pending creates: 1], src=/hbase/WALs/jg-virtualbox,37467,1520306426524-splitting/jg-virtualbox%2C37467%2C1520306426524.default.1520306429913
+2018-03-05 23:32:13,624 WARN org.apache.hadoop.hdfs.StateChange: DIR* NameSystem.internalReleaseLease: File /hbase/WALs/jg-virtualbox,37467,1520306426524-splitting/jg-virtualbox%2C37467%2C1520306426524.default.1520306429913 has not been closed. Lease recovery is in progress. RecoveryId = 1932 for block blk_1073742727_1911
+2018-03-05 23:32:13,657 INFO org.apache.hadoop.ipc.Server: IPC Server handler 0 on 54310, call Call#152 Retry#0 org.apache.hadoop.hdfs.protocol.ClientProtocol.delete from 127.0.0.1:43672
+org.apache.hadoop.fs.PathIsNotEmptyDirectoryException: `/hbase/WALs/jg-virtualbox,39927,1518701542856-splitting is non empty': Directory is not empty
+	at org.apache.hadoop.hdfs.server.namenode.FSDirDeleteOp.delete(FSDirDeleteOp.java:116)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.delete(FSNamesystem.java:2891)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.delete(NameNodeRpcServer.java:1084)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.delete(ClientNamenodeProtocolServerSideTranslatorPB.java:680)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:523)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:991)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:869)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:815)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1962)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2675)
+2018-03-05 23:32:14,554 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: commitBlockSynchronization(oldBlock=BP-698753774-127.0.1.1-1518465950403:blk_1073742727_1911, newgenerationstamp=1932, newlength=743, newtargets=[127.0.0.1:9866], closeFile=true, deleteBlock=false)
+2018-03-05 23:32:14,578 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: commitBlockSynchronization(oldBlock=BP-698753774-127.0.1.1-1518465950403:blk_1073742727_1911, file=/hbase/WALs/jg-virtualbox,37467,1520306426524-splitting/jg-virtualbox%2C37467%2C1520306426524.default.1520306429913, newgenerationstamp=1932, newlength=743, newtargets=[127.0.0.1:9866]) successful
+2018-03-05 23:32:18,034 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/data/hbase/namespace/70d62807e80b51bad7d48f8ffb7f868c/recovered.edits/29.seqid is closed by DFSClient_NONMAPREDUCE_-1532081765_1
+2018-03-05 23:32:18,107 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/data/default/mytable/4930e2e7307e1f94b4eebcb3ca1f596f/recovered.edits/37.seqid is closed by DFSClient_NONMAPREDUCE_-1532081765_1
+2018-03-05 23:32:32,215 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/MasterProcWALs/state-00000000000000000062.log is closed by DFSClient_NONMAPREDUCE_-1532081765_1
+2018-03-05 23:32:36,579 INFO org.apache.hadoop.util.JvmPauseMonitor: Detected pause in JVM or host machine (eg GC): pause of approximately 4094ms
+GC pool 'PS Scavenge' had collection(s): count=1 time=4351ms
+2018-03-05 23:32:39,139 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 127.0.0.1
+2018-03-05 23:32:39,142 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Rolling edit logs
+2018-03-05 23:32:39,143 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Ending log segment 8102, 8283
+2018-03-05 23:32:39,146 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 183 Total time for transactions(ms): 55 Number of transactions batched in Syncs: 26 Number of syncs: 158 SyncTimes(ms): 274 
+2018-03-05 23:32:39,156 INFO org.apache.hadoop.hdfs.server.namenode.FileJournalManager: Finalizing edits file /app/hadoop/tmp/dfs/name/current/edits_inprogress_0000000000000008102 -> /app/hadoop/tmp/dfs/name/current/edits_0000000000000008102-0000000000000008284
+2018-03-05 23:32:39,161 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Starting log segment at 8285
+2018-03-05 23:32:39,908 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Sending fileName: /app/hadoop/tmp/dfs/name/current/fsimage_0000000000000008101, fileSize: 10570. Sent total: 10570 bytes. Size of last segment intended to send: -1 bytes.
+2018-03-05 23:32:39,946 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Sending fileName: /app/hadoop/tmp/dfs/name/current/edits_0000000000000008102-0000000000000008284, fileSize: 20932. Sent total: 20932 bytes. Size of last segment intended to send: -1 bytes.
+2018-03-05 23:32:40,960 INFO org.apache.hadoop.hdfs.server.common.Util: Combined time for file download and fsync to all disks took 0.01s. The file download took 0.01s at 1375.00 KB/s. Synchronous (fsync) write to disk of /app/hadoop/tmp/dfs/name/current/fsimage.ckpt_0000000000000008284 took 0.00s.
+2018-03-05 23:32:40,962 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Downloaded file fsimage.ckpt_0000000000000008284 size 11713 bytes.
+2018-03-05 23:32:41,017 INFO org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager: Going to retain 2 images with txid >= 8101
+2018-03-05 23:32:41,018 INFO org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager: Purging old image FSImageFile(file=/app/hadoop/tmp/dfs/name/current/fsimage_0000000000000007964, cpktTxId=0000000000000007964)
+2018-03-05 23:36:52,084 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 2 Total time for transactions(ms): 2 Number of transactions batched in Syncs: 0 Number of syncs: 2 SyncTimes(ms): 179 
+2018-03-05 23:36:52,139 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742747_1933, replicas=127.0.0.1:9866 for /usr/hduser/flume/wordcount_keywords/hashtags.txt._COPYING_
+2018-03-05 23:36:52,258 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /usr/hduser/flume/wordcount_keywords/hashtags.txt._COPYING_ is closed by DFSClient_NONMAPREDUCE_-1113164239_1
+2018-03-05 23:38:01,766 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 8 Total time for transactions(ms): 2 Number of transactions batched in Syncs: 1 Number of syncs: 7 SyncTimes(ms): 186 
+2018-03-05 23:38:04,439 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742748_1934, replicas=127.0.0.1:9866 for /usr/hduser/flume/wordcount_keywords_result/_temporary/0/_temporary/attempt_local1455234246_0001_r_000000_0/part-r-00000
+2018-03-05 23:38:04,530 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /usr/hduser/flume/wordcount_keywords_result/_temporary/0/_temporary/attempt_local1455234246_0001_r_000000_0/part-r-00000 is closed by DFSClient_NONMAPREDUCE_1197094514_1
+2018-03-05 23:38:04,708 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /usr/hduser/flume/wordcount_keywords_result/_SUCCESS is closed by DFSClient_NONMAPREDUCE_1197094514_1
+2018-03-05 23:38:33,682 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742749_1935, replicas=127.0.0.1:9866 for /hbase/data/hbase/meta/1588230740/.tmp/ac1c8e48603844bbb039ee911f650be7
+2018-03-05 23:38:33,697 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/data/hbase/meta/1588230740/.tmp/ac1c8e48603844bbb039ee911f650be7 is closed by DFSClient_NONMAPREDUCE_-1532081765_1
+2018-03-05 23:38:34,011 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742750_1936, replicas=127.0.0.1:9866 for /hbase/data/hbase/meta/1588230740/.tmp/5419c90b370345d3b03a7bf9d41ab53d
+2018-03-05 23:38:34,033 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/data/hbase/meta/1588230740/.tmp/5419c90b370345d3b03a7bf9d41ab53d is closed by DFSClient_NONMAPREDUCE_-1532081765_1
+2018-03-05 23:39:51,568 INFO org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: StorageInfo TreeSet fill ratio DS-a45d54a7-507f-4ecb-8d54-e57b1b521ba1 : 1.0
+2018-03-05 23:41:35,420 INFO org.apache.hadoop.hdfs.StateChange: BLOCK* allocate blk_1073742751_1937, replicas=127.0.0.1:9866 for /hbase/MasterProcWALs/state-00000000000000000063.log
+2018-03-05 23:41:35,422 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 48 Total time for transactions(ms): 8 Number of transactions batched in Syncs: 11 Number of syncs: 35 SyncTimes(ms): 210 
+2018-03-05 23:41:35,443 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/MasterProcWALs/state-00000000000000000063.log is closed by DFSClient_NONMAPREDUCE_-1532081765_1
+2018-03-05 23:41:35,628 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/data/hbase/namespace/70d62807e80b51bad7d48f8ffb7f868c/recovered.edits/31.seqid is closed by DFSClient_NONMAPREDUCE_-1532081765_1
+2018-03-05 23:41:35,629 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/data/default/mytable/4930e2e7307e1f94b4eebcb3ca1f596f/recovered.edits/39.seqid is closed by DFSClient_NONMAPREDUCE_-1532081765_1
+2018-03-05 23:41:41,770 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/data/hbase/meta/1588230740/recovered.edits/91.seqid is closed by DFSClient_NONMAPREDUCE_-1532081765_1
+2018-03-05 23:41:41,952 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: BLOCK* blk_1073742745_1930 is COMMITTED but not COMPLETE(numNodes= 0 <  minimum = 1) in file /hbase/WALs/jg-virtualbox,43667,1520310712672/jg-virtualbox%2C43667%2C1520310712672..meta.1520310731389.meta
+2018-03-05 23:41:42,355 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/WALs/jg-virtualbox,43667,1520310712672/jg-virtualbox%2C43667%2C1520310712672..meta.1520310731389.meta is closed by DFSClient_NONMAPREDUCE_-1532081765_1
+2018-03-05 23:41:42,376 INFO org.apache.hadoop.hdfs.StateChange: DIR* completeFile: /hbase/WALs/jg-virtualbox,43667,1520310712672/jg-virtualbox%2C43667%2C1520310712672.default.1520310724271 is closed by DFSClient_NONMAPREDUCE_-1532081765_1
+2018-03-05 23:41:57,366 ERROR org.apache.hadoop.hdfs.server.namenode.NameNode: RECEIVED SIGNAL 15: SIGTERM
+2018-03-05 23:41:57,381 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at jg-VirtualBox/127.0.1.1
+************************************************************/

@@ -1,0 +1,279 @@
+﻿// Jonathan Gregory
+// CS 490 Project 2
+// Please find the output logs at the following link as it was over 3gbs:
+// https://goo.gl/x52Jp3
+
+//Step 1:  Switch to hduser
+su hduser
+
+//Step 2: start all services
+
+/usr/local/hadoop/sbin/start-dfs.sh
+/usr/local/hadoop/sbin/start-yarn.sh
+$HBASE_HOME/bin/start-hbase.sh
+
+// Step 3: check that all 7 services are running with this line
+jps
+
+
+// Step 4: change folder to spark
+cd /usr/local/spark/
+
+// Step 5: open spark with scala
+$SPARK_HOME/bin/spark-shell
+
+
+
+
+//////////// operation 1: Retrieve the id and creation time of each tweet ////////////
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+val df = sqlContext.read.json("/home/jg/Documents/JMG/tweets/merged.json")
+///////////// start of operation 2 code ////////////////
+val resultQ1 = df.select("id","created_at")
+resultQ1.rdd.saveAsTextFile("hdfs://localhost:54310/usr/hduser/projectDemo/operation1output")
+
+
+
+
+
+//////////// operation 2: Retrieve the user id, followers count, and friends count for each tweet and order the results by user id ////////////
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+val df = sqlContext.read.json("/home/jg/Documents/JMG/tweets/merged.json")
+///////////// start of operation 2 code ////////////////
+val resultQ2 = df.select("user.id","user.followers_count","user.friends_count").orderBy(asc("user.id"))
+/////// out puts result to HDSF //////////
+resultQ2.rdd.saveAsTextFile("hdfs://localhost:54310/usr/hduser/projectDemo/operation2output")
+
+
+
+
+
+
+//////////// operation 3: Retrieve the tweet id, user id for those tweets whose lang = “en” ////////////
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+val df = sqlContext.read.json("/home/jg/Documents/JMG/tweets/merged.json")
+///////////// start of operation 3 code ////////////////
+val resultQ3 = df.select("id","user.id").filter($"lang"==="en")
+/////// out puts result to HDSF //////////
+resultQ3.rdd.saveAsTextFile("hdfs://localhost:54310/usr/hduser/projectDemo/operation3output")
+
+
+
+
+
+
+//////////// operation 4: Retrieve all the hashtags in the tweets and output the list of unique hashtags and their total frequency of occurrence in the tweets ////////////
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+val df = sqlContext.read.json("/home/jg/Documents/JMG/tweets/merged.json")
+///////////// start of operation 4 code ////////////////
+df.createOrReplaceTempView("tempTable")
+val ht = spark.sql("select explode(entities.hashtags.text) as Hashtags from tempTable")
+ht.createOrReplaceTempView("hashtags")
+val resultQ4 = spark.sql("select Hashtags, count(*) as COUNT from hashtags group by Hashtags order by COUNT desc")
+/////// out puts result to HDSF //////////
+resultQ4.rdd.saveAsTextFile("hdfs://localhost:54310/usr/hduser/projectDemo/operation4output")
+
+
+
+
+
+
+
+//////////// operation 5: Retrieve all the URLs posted by users in the tweets and output the list of unique URLs and their total frequency of occurrence in the tweets, order by the URL frequency (high to low) ////////////
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+val df = sqlContext.read.json("/home/jg/Documents/JMG/tweets/merged.json")
+///////////// start of operation 5 code ////////////////
+val resultQ5 = df.groupBy("entities.urls").count().sort(desc("count"))
+/////// out puts result to HDSF //////////
+resultQ5.rdd.saveAsTextFile("hdfs://localhost:54310/usr/hduser/projectDemo/operation5output")
+
+
+
+
+
+
+//////////// operation 6: Retrieve the start position of every hashtag in the tweets and output them in sorted order (ascending order) ////////////
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+val df = sqlContext.read.json("/home/jg/Documents/JMG/tweets/merged.json")
+///////////// start of operation 6 code ////////////////
+df.createOrReplaceTempView("tempTable")
+val ht = spark.sql("select explode(entities.hashtags.indices) as Hashtags from tempTable")
+ht.createOrReplaceTempView("hashtags")
+val resultQ6 = spark.sql("select Hashtags[0] from hashtags order by hashtags asc")
+/////// out puts result to HDSF //////////
+resultQ6.rdd.saveAsTextFile("hdfs://localhost:54310/usr/hduser/projectDemo/operation6output")
+
+
+
+
+
+
+//////////// operation 7: Select tweets where isFavorited is false and only output the average of the followers count by grouping the tweets based on time zone ////////////
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+val df = sqlContext.read.json("/home/jg/Documents/JMG/tweets/merged.json")
+///////////// start of operation 7 code ////////////////
+val resultQ7 = df.filter($"favorited"==="false").groupBy("user.time_zone").agg(mean("user.followers_count"))
+/////// out puts result to HDSF //////////
+resultQ7.rdd.saveAsTextFile("hdfs://localhost:54310/usr/hduser/projectDemo/operation7output")
+
+
+
+
+
+
+
+//////////// operation 8: Select tweets where isRetweeted is false and the user is not verified, and only output the average of the friends count by grouping the tweets based on time zone  ////////////
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+val df = sqlContext.read.json("/home/jg/Documents/JMG/tweets/merged.json")
+///////////// start of operation 8 code ////////////////
+val resultQ8 = df.filter($"retweeted"==="false" && $"user.verified"==="false").groupBy("user.time_zone").agg(mean("user.friends_count"))
+/////// out puts result to HDSF //////////
+resultQ8.rdd.saveAsTextFile("hdfs://localhost:54310/usr/hduser/projectDemo/operation8output")
+
+
+
+
+
+
+
+//////////// operation 9: Create a table X by selecting tweets that are in the English language. Create a table Y by selecting tweets that are from verified users. Join the two tables X and Y by time zone and output the tweet ID in X and tweet ID in Y. ////////////
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+val df = sqlContext.read.json("/home/jg/Documents/JMG/tweets/merged.json")
+///////////// start of operation 9 code ////////////////
+df.filter($"lang"==="en").createOrReplaceTempView("X")
+df.filter($"user.verified"==="true").createOrReplaceTempView("Y")
+val resultQ9 = sqlContext.sql("select X.id, Y.id from X, Y where X.user.time_zone = Y.user.time_zone")
+/////// out puts result to HDSF //////////
+resultQ9.rdd.saveAsTextFile("hdfs://localhost:54310/usr/hduser/projectDemo/operation9output")
+
+
+
+
+
+
+//////////// operation 10: Create a table X by selecting hashtags from tweets where the user’s time zone is US Pacific Time. Create a table Y by selecting from tweets where the user’s time zone is US Eastern Time. Join X and Y by hashtag and output the entire join result with new attribute names ‘hashtag1’ and ‘hashtag2’. ////////////
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+val df = sqlContext.read.json("/home/jg/Documents/JMG/tweets/merged.json")
+///////////// start of operation 10 code ////////////////
+df.select("id", "entities.hashtags.text").filter($"user.time_zone"==="Pacific Time (US & Canada)").registerTempTable("X")
+df.select("id", "entities.hashtags.text").filter($"user.time_zone"==="Eastern Time (US & Canada)").registerTempTable("Y")
+val resultQ10 = spark.sql("select X.id as hashtag1, Y.id as hashtag2 from X, Y where X.text = Y.text")
+
+/////// out puts result to HDSF //////////
+resultQ10.rdd.saveAsTextFile("hdfs://localhost:54310/usr/hduser/projectDemo/operation10output")
+
+
+
+
+
+
+//////////// operation 11: Create a DataFrame X by extracting a user’s id, location, language, friends count, and followers count from all the tweets. Select the id and location of every record in X where language is not English and also output (along with id and location) the average friends and followers count computed over all records in X where language is not English. ////////////
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+val df = sqlContext.read.json("/home/jg/Documents/JMG/tweets/merged.json")
+///////////// start of operation 11 code ////////////////
+df.select("user.id", "user.location", "user.lang", "user.friends_count","user.followers_count").createOrReplaceTempView("user") 
+val X = sqlContext.sql("SELECT * FROM user") 
+val resultQ11_pt1=X.select("user.id", "user.location").filter($"user.lang" !== "en")
+val resultQ11_pt2=X.filter($"user.lang" !== "en").agg(mean("user.friends_count"),mean("user.followers_count"))
+val resultQ11 = resultQ11_pt1.crossJoin(resultQ11_pt2)
+resultQ11.show()
+/////// out puts result to HDSF //////////
+resultQ11.rdd.saveAsTextFile("hdfs://localhost:54310/usr/hduser/projectDemo/operation11")
+
+
+
+
+//////////// operation 12: Create a Dataset X by extracting a user’s id, location, language, friends count, and followers count from all the tweets. Select the id and location of every record in X where the followers count is greater than 10. ////////////
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+val df = sqlContext.read.json("/home/jg/Documents/JMG/tweets/merged.json")
+///////////// start of operation 12 code ////////////////
+case class operation12 (id: String, location: String, lang: String, friends_count: Long, followers_count: Long)
+val q12X = df.select("user.id", "user.location", "user.lang","user.friends_count","user.followers_count").as[operation12] 
+val resultQ12 = q12X.select("id","location").filter("followers_count > 10")
+/////// out puts result to HDSF //////////
+resultQ12.rdd.saveAsTextFile("hdfs://localhost:54310/usr/hduser/projectDemo/operation12output")
+
+
+
+
+
+
+//////////// operation 13: Create a Dataset X by extracting a user’s id, location, language, friends count, and followers count from all the tweets. Select the id and location of every record in X and also output (along with id and location) the max friends count computed over those records that are of the same language as the record being output. ////////////
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+val df = sqlContext.read.json("/home/jg/Documents/JMG/tweets/merged.json")
+///////////// start of operation 13 code ////////////////
+
+///////////// creates a table with just the requested fields of the data set /////////////
+df.select("user.id", "user.location", "user.lang","user.friends_count","user.followers_count").createOrReplaceTempView("tempTableQ13")
+///////////// creates a table with just the lang and max friends per lang /////////////
+df.groupBy("user.lang").agg(max("user.friends_count").as("max_friends_count_of_lang")).createOrReplaceTempView("TempQ13MaxFriendCountTable")
+///////////// joins the two tables /////////////
+val res = sqlContext.sql("select tempTableQ13.id, tempTableQ13.location, tempTableQ13.lang, tempTableQ13.friends_count, tempTableQ13.followers_count, TempQ13MaxFriendCountTable.max_friends_count_of_lang from tempTableQ13, TempQ13MaxFriendCountTable where TempQ13MaxFriendCountTable.lang = tempTableQ13.lang")
+///////////// creates the dataset template /////////////
+case class operation13 (id: String, location: String, lang: String, friends_count: Long, followers_count: Long, max_friends_count_of_lang: Long)
+///////////// loads all the desired info into the dataset /////////////
+val q13X = res.select("id", "location","lang","friends_count","followers_count","max_friends_count_of_lang").as[operation13]
+///////////// outputs just the requested info /////////////
+val resultQ13 = q13X.select("id","location", "max_friends_count_of_lang")
+resultQ13.show()
+/////// out puts result to HDSF //////////
+resultQ13.rdd.saveAsTextFile("hdfs://localhost:54310/usr/hduser/projectDemo/operation13output")
+
+
+
+
+
+
+//////////// operation 14: Create a DataFrame X by extracting a user’s id, location, language, friends count, and followers count from all the tweets. Create a DataFrame Y by extracting the id of every verified user from all the tweets. Select all records in X where the id does not exists in Y////////////
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+val df = sqlContext.read.json("/home/jg/Documents/JMG/tweets/merged.json")
+///////////// start of operation 14 code ////////////////
+///////////// loads the users data into dataframe_X /////////////
+val dataframe_X = df.select("user.id", "user.location","user.lang","user.friends_count","user.followers_count")
+///////////// loads the users data into dataframe_Y /////////////
+val dataframe_Y = df.select("user.id").filter($"user.verified"==="true")
+///////////// shows only the results that are not in dataframe_Y
+val resultQ14 = dataframe_X.join(dataframe_Y, dataframe_X.col("id") === dataframe_Y.col("id"), "leftanti")
+/////// out puts result to HDSF //////////
+resultQ14.rdd.saveAsTextFile("hdfs://localhost:54310/usr/hduser/projectDemo/operation14output")
+
+
+
+
+
+
+//////////// operation 15: Create a Dataset X by extracting a user’s id, location, and language from all the tweets. Create a Dataset Y by extracting the id and friends count of every non-verified user from all the tweets. Select all records in X if the id exists in Y and friends count is greater than 10. ////////////
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+val df = sqlContext.read.json("/home/jg/Documents/JMG/tweets/merged.json")
+///////////// start of operation 15 code ////////////////
+
+///////////// creates dataset X template /////////////
+case class operation15X (id: String, location: String, lang: String, friends_count: Long, followers_count: Long)
+///////////// loads the users data into dataset X /////////////
+val dataset15_X = df.select("user.id", "user.location", "user.lang","user.friends_count","user.followers_count").as[operation15X]
+///////////// creates dataset Y template /////////////
+case class operation15Y (id: String, friends_count: Long)
+///////////// loads the ID and friend count of non verified users into dataset Y /////////////
+val dataset15_Y = df.select("user.id","user.friends_count").filter($"user.verified"==="false").filter($"user.friends_count">10).as[operation15Y]
+///////////// shows only the results that are not in dataframe_Y
+val resultQ15 = dataset15_X.join(dataset15_Y, dataset15_X.col("id") === dataset15_Y.col("id"), "inner")
+
+/////// out puts result to HDSF //////////
+resultQ15.rdd.saveAsTextFile("hdfs://localhost:54310/usr/hduser/projectDemo/operation15output")
+
+
